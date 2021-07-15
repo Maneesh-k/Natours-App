@@ -2,7 +2,9 @@
 import axios from 'axios';
 import { showAlert } from './alerts';
 import Stripe from 'stripe';
-const stripe =new Stripe('pk_test_51J5mUUSGRRMcwQbcvI1jAPZ5u0le5f4as1GRD3ZCnteiOBOJU2nN2Ouw2f5qPsUYKiCeRqWyGTZ5eTRzzr7h8Vhf00U3IT6ATv');
+const stripe =new Stripe('pk_test_51J5mUUSGRRMcwQbcvI1jAPZ5u0le5f4as1GRD3ZCnteiOBOJU2nN2Ouw2f5qPsUYKiCeRqWyGTZ5eTRzzr7h8Vhf00U3IT6ATv', {
+  apiVersion: '2020-08-27',
+});
 
 export const bookTour = async tourId => {
   try {
